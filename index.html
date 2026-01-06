@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Integration Architect</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    
+    <div class="grid-overlay"></div>
+    <div class="scanline"></div>
+
+    <header>
+        <div class="logo">NEXUS<span class="highlight">_AI</span></div>
+        <div class="status">SYSTEM: ONLINE</div>
+    </header>
+
+    <main>
+        <section class="section" id="hero">
+            <div class="sticky-wrapper" style="justify-content: center;">
+                <div class="content">
+                    <h1 class="glitch" data-text="INTELLIGENCE">INTELLIGENCE</h1>
+                    <h2 class="glitch" data-text="EMBEDDED">EMBEDDED</h2>
+                    <p class="subtitle">Next-Gen LLM Integration Protocols</p>
+                    <div class="scroll-indicator">
+                        <span>SCROLL TO INITIALIZE</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="chatbots">
+            <div class="sticky-wrapper">
+                <div class="content-box glass-panel left">
+                    <h3>01 // CONVERSATIONAL AGENTS</h3>
+                    <h2>Contextual Chatbots</h2>
+                    <p>Deploy RAG-enhanced neural interfaces. Beyond simple Q&A, our agents maintain long-term state, understand user intent through semantic analysis, and execute function calls directly within your infrastructure.</p>
+                    <ul class="feature-list">
+                        <li>> Vector Database Retrieval</li>
+                        <li>> Sentiment Analysis</li>
+                        <li>> Autonomous Action Execution</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="validation">
+            <div class="sticky-wrapper">
+                <div class="content-box glass-panel right">
+                    <h3>02 // DATA INTEGRITY</h3>
+                    <h2>Intelligent Validation</h2>
+                    <p>Replace static RegEx with semantic validation models. LLMs parse unstructured input, correct formatting errors in real-time, and ensure data hygiene before it hits your database.</p>
+                    <div class="code-snippet">
+                        <code>
+                            validate(input) => {<br>
+                            &nbsp;&nbsp;confidence: 0.98,<br>
+                            &nbsp;&nbsp;sentiment: "positive",<br>
+                            &nbsp;&nbsp;intent: "purchase"<br>
+                            }
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="analytics">
+            <div class="sticky-wrapper">
+                <div class="content-box glass-panel left">
+                    <h3>03 // PREDICTIVE INSIGHTS</h3>
+                    <h2>Real-time Synthesis</h2>
+                    <p>Transform raw clickstreams into actionable narrative strategies. Embed LLMs to analyze user behavior patterns and dynamically adjust UI/UX elements to maximize engagement.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="search">
+            <div class="sticky-wrapper">
+                <div class="content-box glass-panel right">
+                    <h3>04 // KNOWLEDGE RETRIEVAL</h3>
+                    <h2>Semantic Vectorization</h2>
+                    <p>Transmute unstructured corporate knowledge bases into queryable high-dimensional tensors. Our pipeline automatically chunks, embeds, and indexes data for sub-second context retrieval.</p>
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <span class="stat-val">1536</span>
+                            <span class="stat-label">DIMENSIONS</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-val">20ms</span>
+                            <span class="stat-label">LATENCY</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="security">
+            <div class="sticky-wrapper">
+                <div class="content-box glass-panel left">
+                    <h3>05 // GOVERNANCE LAYER</h3>
+                    <h2>Deterministic Guardrails</h2>
+                    <p>Enforce strict output schemas and prevent prompt injection attacks. Our middleware intercepts LLM calls to redact PII and validate compliance before response generation.</p>
+                    <div class="terminal-window">
+                        <div class="terminal-header">security_log.txt</div>
+                        <div class="terminal-body">
+                            <div class="line"><span class="ts">[10:42:01]</span> SCANNING PROMPT...</div>
+                            <div class="line warning"><span class="ts">[10:42:02]</span> <span class="alert">ALERT:</span> INJECTION DETECTED</div>
+                            <div class="line"><span class="ts">[10:42:02]</span> SANITIZING INPUT...</div>
+                            <div class="line success"><span class="ts">[10:42:03]</span> REQUEST AUTHORIZED</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="deployment">
+            <div class="sticky-wrapper" style="justify-content: center;">
+                <div class="content-box glass-panel center-wide">
+                    <h3>06 // INFRASTRUCTURE</h3>
+                    <h2>Hybrid Deployment Architecture</h2>
+                    <p>Orchestrate inference across edge devices and cloud clusters. Optimize for privacy or performance dynamically.</p>
+                    <div class="arch-grid">
+                        <div class="arch-card">
+                            <h4>EDGE</h4>
+                            <p>Quantized Local Models (ONNX/GGUF)</p>
+                        </div>
+                        <div class="arch-connector">⇄</div>
+                        <div class="arch-card">
+                            <h4>CLOUD</h4>
+                            <p>Scalable Inference Clusters</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HORIZONTAL SCROLL SECTION -->
+        <section class="section horizontal-pin" id="multimodal">
+            <div class="horizontal-track">
+                <!-- Panel 1: Vision -->
+                <div class="h-panel panel-vision">
+                    <div class="glass-panel">
+                        <h3>07-A // VISION CORTEX</h3>
+                        <h2>Computer Vision</h2>
+                        <p>Real-time object detection and OCR extraction. Turn pixels into structured JSON data.</p>
+                        <div class="vision-ui">
+                            <div class="reticle">Target: VEHICLE_01</div>
+                            <div class="scan-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Panel 2: Audio -->
+                <div class="h-panel panel-audio">
+                    <div class="glass-panel">
+                        <h3>07-B // AUDITORY NEXUS</h3>
+                        <h2>Voice Synthesis</h2>
+                        <p>Bi-directional audio streams. Whisper for transcription, Neural TTS for emotive response.</p>
+                        <div class="waveform-ui">
+                            <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Panel 3: Lidar -->
+                <div class="h-panel panel-lidar">
+                    <div class="glass-panel">
+                        <h3>07-C // SPATIAL FUSION</h3>
+                        <h2>Lidar Mapping</h2>
+                        <p>3D point cloud processing for robotics and spatial computing interfaces.</p>
+                        <div class="lidar-ui">
+                            <div class="radar-sweep"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="swarm">
+            <div class="sticky-wrapper">
+                <div class="content-box glass-panel left">
+                    <h3>08 // AGENT SWARM</h3>
+                    <h2>Autonomous Orchestration</h2>
+                    <p>Deploy specialized agent teams. The "Coder" writes, the "Reviewer" critiques, and the "Manager" coordinates—all autonomously.</p>
+                    <div class="agent-grid">
+                        <div class="agent-node">DEV</div>
+                        <div class="agent-link"></div>
+                        <div class="agent-node">SEC</div>
+                        <div class="agent-link"></div>
+                        <div class="agent-node">OPS</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <div class="sticky-wrapper" style="justify-content: center;">
+                <div class="content">
+                    <h2>INITIATE PROTOCOL</h2>
+                    <p>Ready to deploy? Establish a connection.</p>
+                    <button class="cy-button">CONNECT_</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
